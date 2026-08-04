@@ -1,2 +1,47 @@
-# gottlieb-build-design
-Gottlieb Build &amp; Design - Construction Operating System - Master PRD &amp; Codebase
+# Gottlieb Build & Design
+
+**Construction Operating System** — the flagship construction platform within the Gottlieb Operating System (GOS) ecosystem.
+
+## Status
+
+📄 **Specification phase.** No application code has been written yet. This repository currently contains the complete Master Product Requirements Document (PRD) that will govern all future development.
+
+## /docs — Master PRD
+
+The PRD is organized into ten volumes, each in its own folder:
+
+| Volume | Folder | Covers |
+|---|---|---|
+| I | `01-Executive` | Project charter, vision, scope boundaries |
+| II | `02-Brand` | Visual identity, design philosophy, design system |
+| III | `03-Architecture` | System architecture, technology stack, environments |
+| IV | `04-Database` | PostgreSQL schema, ER diagrams, relationships, indexes |
+| V | `05-Permissions` | Role-based access control and Row Level Security model |
+| VI | `06-Modules` | Functional specification for every application module |
+| VII | `07-AI` | AI Estimating, Blueprint Intelligence, AI Assistant strategy |
+| VIII | `08-3D` | 3D Design Studio, GLB pipeline, material configurator |
+| IX | `09-API` | REST API design, authentication, webhooks, integration layer |
+| X | `10-Roadmap` | Technical, module, AI, UI, database, and release roadmaps |
+
+Read **Volume I** first — it explains how to use the rest of the document set.
+
+## Planned repository structure
+
+```text
+/docs        — this PRD, organized by volume (populated)
+/app         — the Next.js application (not yet started)
+/packages    — shared UI component library, design tokens, typed API clients
+/supabase    — database migrations, RLS policies, seed data, generated types
+/scripts     — build, deployment, and data-maintenance scripts
+/.github     — GitHub Actions workflows
+```
+
+## Core stack (see Volume III for full detail)
+
+Next.js · React · TypeScript · TailwindCSS · React Three Fiber / Three.js / Drei · Supabase (Postgres, Auth, Storage, Realtime) · Vercel · GitHub Actions
+
+## Non-goals
+
+- No Medical Administration functionality (HIPAA, patient data, clinical workflows) — architecturally isolated, see Volume I §2.4.
+- No custom 3D rendering engine — the 3D Design Studio consumes pre-built Blender GLB assets, see Volume VIII.
+- No redesign of the existing GOS Document Generator — integrated via API only, see Volume IX.
