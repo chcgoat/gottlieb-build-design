@@ -22,8 +22,9 @@ The PRD is organized into ten volumes, each in its own folder:
 | VIII | `08-3D` | 3D Design Studio, GLB pipeline, material configurator |
 | IX | `09-API` | REST API design, authentication, webhooks, integration layer |
 | X | `10-Roadmap` | Technical, module, AI, UI, database, and release roadmaps |
+| — | `11-Engineering-Standards` | Engineering Standards Manual — folder structure, naming, component/database/Supabase conventions, GitHub workflow, testing, performance, security, AI coding standards |
 
-Read **Volume I** first — it explains how to use the rest of the document set.
+Read **Volume I** first — it explains how to use the rest of the document set. Read **11-Engineering-Standards** before writing any code — it governs how every module is built.
 
 ## Planned repository structure
 
