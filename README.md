@@ -4,14 +4,17 @@
 
 ## Status
 
-📄 **Specification phase.** No application code has been written yet. This repository currently contains the complete Master Product Requirements Document (PRD) that will govern all future development.
+📄 **Specification phase.** No application code has been written yet. This repository contains the complete, frozen v1.0 documentation set that governs all future development.
 
-## /docs — Master PRD
+## Start here
 
-The PRD is organized into ten volumes, each in its own folder:
+**[`/docs/00-Master-Development-Bible`](docs/00-Master-Development-Bible)** is the single source of truth. It consolidates Vision, Architecture, Engineering Standards, UI/UX Standards, Database Design, API Specifications, AI Architecture, 3D Standards, Development Workflow, Release Management, Security, Testing, and the Prompt Library into one document, with cross-references into the full-detail source documents below. Every future build prompt should cite this document's chapter numbers rather than restating requirements.
 
-| Volume | Folder | Covers |
+## Full documentation set
+
+| Doc | Folder | Covers |
 |---|---|---|
+| — | `00-Master-Development-Bible` | **Start here.** Consolidated single source of truth + Prompt Library |
 | I | `01-Executive` | Project charter, vision, scope boundaries |
 | II | `02-Brand` | Visual identity, design philosophy, design system |
 | III | `03-Architecture` | System architecture, technology stack, environments |
@@ -24,13 +27,12 @@ The PRD is organized into ten volumes, each in its own folder:
 | X | `10-Roadmap` | Technical, module, AI, UI, database, and release roadmaps |
 | — | `11-Engineering-Standards` | Engineering Standards Manual — folder structure, naming, component/database/Supabase conventions, GitHub workflow, testing, performance, security, AI coding standards |
 | — | `12-Design-Bible` | Complete UI/UX Design System — brand application, typography, iconography, grid, navigation, role dashboards, Design Studio, Material Studio, portal experiences, mobile, components, motion, accessibility, i18n/RTL |
-| — | `13-Architecture-Bible` | System Architecture Bible — the five core systems (GOS Core, Build & Design, Document Generator, future Medical OS, AI Services), module communication, event system, notification architecture, AI Gateway contract, Document Generator contract, permission inheritance, mobile backend strategy, plug-in checklist for future modules |
+| — | `13-Architecture-Bible` | System Architecture Bible — the five core systems, module communication, event system, notification architecture, AI Gateway contract, Document Generator contract, permission inheritance, mobile backend strategy, plug-in checklist |
 
-Read **Volume I** first — it explains how to use the rest of the document set. Read **11-Engineering-Standards** before writing any code. Read **12-Design-Bible** before designing or building any screen. Read **13-Architecture-Bible** before wiring any module to another.
+**All five documents are frozen as Version 1.0** (tag: `v1.0-docs-full`). Changes go through a controlled revision process — update both the Master Development Bible and its source document in the same PR, never let them drift apart.
 
-**PRD, Engineering Standards, Design Bible, and Architecture Bible are frozen as Version 1.0** — the four foundational documents. Changes go through a controlled revision process, not ad hoc rewrites.
+## Current recommended build order
 
-**Current recommended build order** (per Architecture Bible Ch. 12, supersedes PRD Vol. X pending formal revision):
 1. Design System (theme, typography, icons, layouts, navigation, component library)
 2. Authentication, Users, Organizations, Permissions, Language, Notifications
 3. Projects, Clients, Vendors, Subcontractors, Documents
@@ -40,7 +42,7 @@ Read **Volume I** first — it explains how to use the rest of the document set.
 ## Planned repository structure
 
 ```text
-/docs        — this PRD, organized by volume (populated)
+/docs        — the full documentation set, organized by volume (populated)
 /app         — the Next.js application (not yet started)
 /packages    — shared UI component library, design tokens, typed API clients
 /supabase    — database migrations, RLS policies, seed data, generated types
@@ -48,12 +50,12 @@ Read **Volume I** first — it explains how to use the rest of the document set.
 /.github     — GitHub Actions workflows
 ```
 
-## Core stack (see Volume III for full detail)
+## Core stack
 
 Next.js · React · TypeScript · TailwindCSS · React Three Fiber / Three.js / Drei · Supabase (Postgres, Auth, Storage, Realtime) · Vercel · GitHub Actions
 
 ## Non-goals
 
-- No Medical Administration functionality (HIPAA, patient data, clinical workflows) — architecturally isolated, see Volume I §2.4.
-- No custom 3D rendering engine — the 3D Design Studio consumes pre-built Blender GLB assets, see Volume VIII.
-- No redesign of the existing GOS Document Generator — integrated via API only, see Volume IX.
+- No Medical Administration functionality (HIPAA, patient data, clinical workflows) — architecturally isolated forever.
+- No custom 3D rendering engine — the 3D Design Studio consumes pre-built Blender GLB assets only.
+- No redesign of the existing GOS Document Generator — integrated via API only.
