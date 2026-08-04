@@ -23,8 +23,11 @@ The PRD is organized into ten volumes, each in its own folder:
 | IX | `09-API` | REST API design, authentication, webhooks, integration layer |
 | X | `10-Roadmap` | Technical, module, AI, UI, database, and release roadmaps |
 | — | `11-Engineering-Standards` | Engineering Standards Manual — folder structure, naming, component/database/Supabase conventions, GitHub workflow, testing, performance, security, AI coding standards |
+| — | `12-Design-Bible` | Complete UI/UX Design System — brand application, typography, iconography, grid, navigation, role dashboards, Design Studio, Material Studio, portal experiences, mobile, components, motion, accessibility, i18n/RTL |
 
-Read **Volume I** first — it explains how to use the rest of the document set. Read **11-Engineering-Standards** before writing any code — it governs how every module is built.
+Read **Volume I** first — it explains how to use the rest of the document set. Read **11-Engineering-Standards** before writing any code. Read **12-Design-Bible** before designing or building any screen.
+
+**PRD, Engineering Standards, and Design Bible are frozen as Version 1.0** — the three foundational documents. Changes go through a controlled revision process, not ad hoc rewrites.
 
 ## Planned repository structure
 
